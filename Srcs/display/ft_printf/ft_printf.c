@@ -6,11 +6,11 @@
 /*   By: hnogared <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/09 22:22:07 by hnogared          #+#    #+#             */
-/*   Updated: 2023/06/06 22:40:08 by hnogared         ###   ########.fr       */
+/*   Updated: 2023/06/06 22:52:29 by hnogared         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../../../Includes/ft_printf.h"
+#include "../../../Includes/libft.h"
 
 int	ft_check_input(const char *input)
 {

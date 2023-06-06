@@ -6,11 +6,11 @@
 /*   By: hnogared <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/14 21:01:38 by hnogared          #+#    #+#             */
-/*   Updated: 2023/06/06 22:39:18 by hnogared         ###   ########.fr       */
+/*   Updated: 2023/06/06 22:52:11 by hnogared         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../../../Includes/ft_printf.h"
+#include "../../../Includes/libft.h"
 
 int	ft_putnbr_fdout(int n, int len, int fd)
 {
