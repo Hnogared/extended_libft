@@ -6,7 +6,7 @@
 /*   By: hnogared <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/01 14:11:48 by hnogared          #+#    #+#             */
-/*   Updated: 2023/06/13 21:16:17 by hnogared         ###   ########.fr       */
+/*   Updated: 2023/06/13 21:18:04 by hnogared         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@
 # include <stdarg.h>
 
 # ifndef ERROR
-#  define ERROR	0
+#  define ERROR	1
 # endif
 
 /* MANDATORY */
