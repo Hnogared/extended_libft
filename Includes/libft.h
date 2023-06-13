@@ -6,7 +6,7 @@
 /*   By: hnogared <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/01 14:11:48 by hnogared          #+#    #+#             */
-/*   Updated: 2023/06/06 22:51:41 by hnogared         ###   ########.fr       */
+/*   Updated: 2023/06/13 21:16:17 by hnogared         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,12 @@
 # include <stddef.h>
 # include <stdlib.h>
 # include <stdint.h>
+
+# include <stdarg.h>
+
+# ifndef ERROR
+#  define ERROR	0
+# endif
 
 /* MANDATORY */
 int		ft_isalpha(int c);
@@ -80,11 +86,6 @@ void	ft_lstclear(t_list **lst, void (*del)(void *));
 void	ft_lstiter(t_list *lst, void (*f)(void *));
 
 /* PRINTF */
-# include <stdlib.h>
-# include <unistd.h>
-# include <stdarg.h>
-# define ERROR	0
-
 int		ft_printf(const char *str, ...);
 
 int		ft_check_char(const char c, const char *set);
