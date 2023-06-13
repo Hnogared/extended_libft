@@ -6,7 +6,7 @@
 /*   By: hnogared <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/09 22:22:07 by hnogared          #+#    #+#             */
-/*   Updated: 2023/06/06 22:52:29 by hnogared         ###   ########.fr       */
+/*   Updated: 2023/06/13 21:25:05 by hnogared         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,7 @@ int	ft_check_input(const char *input)
 			return (ERROR);
 		i++;
 	}
-	return (1);
+	return (0);
 }
 
 int	ft_print_nbrconv(const char conv, va_list args)
@@ -105,7 +105,7 @@ int	ft_printf(const char *input, ...)
 
 	count = 0;
 	if (ft_check_input(input) == ERROR)
-		return (ERROR);
+		return (0);
 	va_start(args, input);
 	count += ft_print_input((char *) input, args);
 	va_end(args);
