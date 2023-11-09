@@ -1,4 +1,4 @@
-libextended_libft.a
+*.a
 .*.swp
 Objs
 *.o
