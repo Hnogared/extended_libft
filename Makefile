@@ -68,7 +68,7 @@ OBJS_D	= Objs
 OBJS	= $(addprefix $(OBJS_D)/, $(LIB_SRCS:.c=.o) $(PRINTF_SRCS:.c=.o))
 
 CC		= gcc
-CFLAGS	= -Werror -Wall -Wextra
+CFLAGS	= -g -Werror -Wall -Wextra
 
 AR		= ar rcs
 
