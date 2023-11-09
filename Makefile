@@ -6,11 +6,11 @@
 #    By: hnogared <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/02/07 07:19:57 by hnogared          #+#    #+#              #
-#    Updated: 2023/06/06 22:43:21 by hnogared         ###   ########.fr        #
+#    Updated: 2023/11/09 18:02:17 by hnogared         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME	= libextended_libft.a
+NAME	= libextended_ft.a
 
 LIB_D		=	Srcs
 LIB_SRCS	= 	ft_isalpha.c		\
