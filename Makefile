@@ -6,7 +6,7 @@
 #    By: hnogared <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/02/07 07:19:57 by hnogared          #+#    #+#              #
-#    Updated: 2023/12/18 15:01:37 by hnogared         ###   ########.fr        #
+#    Updated: 2023/12/18 18:23:36 by hnogared         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -61,6 +61,7 @@ LIB_SRCS	:= 	ft_isalpha.c		\
 				ft_split.c			\
 				ft_split_set.c		\
 				ft_itoa.c			\
+				ft_itoab.c			\
 				ft_strmapi.c		\
 				ft_striteri.c		\
 				ft_putchar_fd.c		\
