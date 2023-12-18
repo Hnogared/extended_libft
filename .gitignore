@@ -2,3 +2,5 @@
 .*.swp
 Objs
 *.o
+unit_tester
+objs
