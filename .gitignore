@@ -6,3 +6,5 @@ Objs
 unit_tester
 objs
 .unit_tester
+testmain.c
+test.out
