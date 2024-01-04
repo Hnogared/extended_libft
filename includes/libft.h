@@ -6,7 +6,7 @@
 /*   By: hnogared <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/01 14:11:48 by hnogared          #+#    #+#             */
-/*   Updated: 2023/12/18 22:49:47 by hnogared         ###   ########.fr       */
+/*   Updated: 2023/12/19 00:19:24 by hnogared         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,10 +28,116 @@
 #  define ERROR	1
 # endif
 
-# include "char_checks.h"
-# include "strings.h"
-
 /* MANDATORY */
+/*
+ * Function to check if a character is alphabetic [a-zA-Z] or numeric [0-1].
+ *
+ * @param int c	-> character to check
+ * @return int	-> 1 if true | 0 if false
+ */
+int		ft_isalnum(int c);
+
+/*
+ * Function to check if a character is alphabetical [a-zA-Z].
+ *
+ * @param int c	-> character to check
+ * @return int	-> 1 if true | 0 if false
+ */
+int		ft_isalpha(int c);
+
+/*
+ * Function to check if a character is within the ascii table.
+ *
+ * @param int c	-> character to check
+ * @return int	-> 1 if true | 0 if false
+ */
+int		ft_isascii(int c);
+
+/*
+ * Function to check if a character is a number [0-9].
+ *
+ * @param int c	-> character to check
+ * @return int	-> 1 if true | 0 if false
+ */
+int		ft_isdigit(int c);
+
+/*
+ * Function to check if a character is displayable.
+ *
+ * @param int c	-> character to check
+ * @return int	-> 1 if true | 0 if false
+ */
+int		ft_isprint(int c);
+
+/*
+ * Function to check if a character is a whitespace.
+ *
+ * @param int c	-> character to check
+ * @return int	-> 1 if true | 0 if false
+ */
+int		ft_iswhitespace(int c);
+
+/*
+ * Function to change an alphabetical character to the lowercase.
+ *
+ * @param int c	-> character to change
+ * @return int	-> the resulting character
+ */
+int		ft_tolower(int c);
+
+/*
+ * Function to change an alphabetical character to the uppercase.
+ *
+ * @param int c	-> character to change
+ * @return int	-> the resulting character
+ */
+int		ft_toupper(int c);
+
+/*
+ * Function to convert a string into a float.
+ * Whitespaces present at the beginning of the string are skipped. The conversion
+ * ends at the last number character, the following ones are ignored.
+ *
+ * @param const char *nptr	-> pointer to the string to convert
+ * @return float			-> the resulting float conversion
+ *
+ * @child_func is_neg		-> function to check if a string starts with '-'
+ * @child_func create_nbr	-> function to convert a trimmd string into a float
+ */
+float	ft_atof(const char *nptr);
+
+/*
+ * Function to convert an untrimmed string into an int.
+ * Whitespaces at the beginning of the string are skipped. The conversion ends
+ * at the last digit of the number, following characters ar ignored.
+ *
+ * @param const char *nptr	-> pointer to the strong to convert
+ * @return int				-> the resulting converted integer
+ */
+int		ft_atoi(const char *nptr);
+
+/*
+ * Function to convert an integer into an allocated string.
+ *
+ * @param int n		-> integer to convert
+ * @return char *	-> teh resulting allocated string
+ *
+ * @child_func get_num_len -> function to get the character length of an int
+ */
+char	*ft_itoa(int n);
+
+/*
+ * Function to convert and store an integer inside a buffer array string.
+ *
+ * @param int n			-> the integer to store
+ * @param char *buf		-> pointer to the array string to store the int into
+ * @param size_t bufsize-> size in bytes of the buffer to store the int into
+ * @return size_t		-> character size of the number saved inside the buffer
+ *
+ * @child_func get_num_len	-> function to get the character length of an int
+ */
+size_t	ft_itoab(int n, char *buf, size_t bufsize);
+
 int		ft_min(int n1, int n2);
 int		ft_max(int n1, int n2);
 float	ft_fmin(float n1, float n2);
@@ -39,7 +145,6 @@ float	ft_fmax(float n1, float n2);
 
 int		ft_strncmp(const char *str, const char *str2, size_t n);
 int		ft_memcmp(const void *s1, const void *s2, size_t n);
-//int		ft_atoi(const char *nptr);
 
 size_t	ft_strlen(const char *str);
 size_t	ft_strlcpy(char *dest, const char *src, size_t n);
@@ -54,8 +159,6 @@ char	*ft_strndup(const char *str, size_t size);
 char	*ft_substr(const char *s, unsigned int start, size_t len);
 char	*ft_strjoin(const char *s1, const char *s2);
 char	*ft_strtrim(const char *s1, const char *set);
-//char	*ft_itoa(int n);
-//size_t	ft_itoab(int n, char *buf, size_t bufsize);
 char	*ft_strmapi(char const *s, char (*f)(unsigned int, char));
 
 char	**ft_split(char const *s, char c);

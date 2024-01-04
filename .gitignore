@@ -1,6 +1,8 @@
 *.a
+*.so
 .*.swp
 Objs
 *.o
 unit_tester
 objs
+.unit_tester
