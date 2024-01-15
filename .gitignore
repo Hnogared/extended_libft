@@ -8,3 +8,4 @@ objs
 .unit_tester
 testmain.c
 test.out
+.tripouille*

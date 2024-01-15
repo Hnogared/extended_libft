@@ -6,13 +6,13 @@
 /*   By: hnogared <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/09 22:22:07 by hnogared          #+#    #+#             */
-/*   Updated: 2024/01/15 19:53:14 by hnogared         ###   ########.fr       */
+/*   Updated: 2024/01/16 00:34:27 by hnogared         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libextended_ft.h"
 
-int	ft_check_input(const char *input)
+static int	check_input(const char *input)
 {
 	size_t	i;
 
@@ -21,83 +21,11 @@ int	ft_check_input(const char *input)
 	{
 		if (input[i] == '%' && input[i + 1] == '%')
 			i++;
-		else if (input[i] == '%' && !ft_check_char(input[i + 1], "bcspdiuxX"))
+		else if (input[i] == '%' && !check_char(input[i + 1], "bcspdiuxX"))
 			return (ERROR);
 		i++;
 	}
 	return (0);
-}
-
-int	ft_print_nbrconv(const char conv, va_list args, int fd)
-{
-	unsigned long	tempaddress;
-
-	tempaddress = 0;
-	if (conv == 'p')
-	{
-		tempaddress = (unsigned long) va_arg(args, unsigned long);
-		if (!tempaddress)
-			return (ft_putstr_fdout("(nil)", fd));
-		return (ft_putstr_fdout("0x", fd)
-			+ ft_puthex_fdout(tempaddress, 0, conv, fd));
-	}
-	if (conv == 'd' || conv == 'i')
-		return (ft_putnbr_fdout((int) va_arg(args, int), 0, fd));
-	if (conv == 'u')
-		return (ft_putunsigned_fdout(va_arg(args, unsigned int), 0, fd));
-	if (conv == 'x' || conv == 'X')
-		return (ft_puthex_fdout(va_arg(args, unsigned int), 0, conv, fd));
-	if (conv == 'b')
-		return (ft_putnbits_fdout(va_arg(args, int), fd));
-	return (0);
-}
-
-int	ft_print_chrconv(const char conv, va_list args, int fd)
-{
-	int				count;
-	char			*tempstr;
-
-	count = 0;
-	if (conv == 'c')
-		count += ft_putchar_fdout((int) va_arg(args, int), fd);
-	if (conv == 's')
-	{
-		tempstr = (char *) va_arg(args, char *);
-		if (!tempstr)
-			return (ft_putstr_fdout("(null)", fd));
-		count += ft_putstr_fdout(tempstr, fd);
-	}
-	if (conv == '%')
-		count += ft_putchar_fdout('%', fd);
-	return (count);
-}
-
-int	ft_print_input(char *input, va_list args, int fd)
-{
-	int		count;
-	size_t	i;
-	size_t	j;
-
-	i = 0;
-	count = 0;
-	while (input[i])
-	{
-		j = 0;
-		while (input[i + j] && input[i + j] != '%')
-			j++;
-		write(fd, input + i, j);
-		i += j;
-		count += j;
-		if (input[i] == '%')
-		{
-			if (ft_check_char(input[i + 1], "bpdiuxX"))
-				count += ft_print_nbrconv(input[i + 1], args, fd);
-			if (ft_check_char(input[i + 1], "cs%"))
-				count += ft_print_chrconv(input[i + 1], args, fd);
-			i += 2;
-		}
-	}
-	return (count);
 }
 
 int	ft_printf(const char *input, ...)
@@ -106,10 +34,27 @@ int	ft_printf(const char *input, ...)
 	va_list	args;
 
 	count = 0;
-	if (ft_check_input(input) == ERROR)
+	if (check_input(input) == ERROR)
 		return (0);
 	va_start(args, input);
-	count += ft_print_input((char *) input, args, STDOUT_FILENO);
+	count += print_formatted((char *) input, args, STDOUT_FILENO);
+	va_end(args);
+	return (count);
+}
+
+/*
+ * Function to interpret a formatted string and print the result.
+ */
+int	ft_fprintf(int fd, const char *input, ...)
+{
+	int		count;
+	va_list	args;
+
+	count = 0;
+	if (check_input(input) == ERROR)
+		return (0);
+	va_start(args, input);
+	count += print_formatted((char *) input, args, fd);
 	va_end(args);
 	return (count);
 }

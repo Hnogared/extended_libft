@@ -6,13 +6,36 @@
 /*   By: hnogared <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/14 21:01:38 by hnogared          #+#    #+#             */
-/*   Updated: 2024/01/15 19:52:53 by hnogared         ###   ########.fr       */
+/*   Updated: 2024/01/16 00:11:51 by hnogared         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libextended_ft.h"
 
-int	ft_putnbits_fdout(int nbr, int fd)
+int	printf_puthex_fd(unsigned long n, int len, char cap, int fd)
+{
+	char	*baselow;
+	char	*basehigh;
+
+	baselow = "0123456789abcdef";
+	basehigh = "0123456789ABCDEF";
+	if (n > 15)
+	{
+		len += printf_puthex_fd(n / 16, 0, cap, fd);
+		len += printf_puthex_fd(n % 16, 0, cap, fd);
+	}
+	if (n <= 15)
+	{
+		if (cap == 'X')
+			printf_putchar_fd(basehigh[n], fd);
+		else
+			printf_putchar_fd(baselow[n], fd);
+		len++;
+	}
+	return (len);
+}
+
+int	printf_putnbits_fd(int nbr, int fd)
 {
 	char			bit;
 	unsigned int	int_size;

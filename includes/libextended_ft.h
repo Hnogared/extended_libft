@@ -6,7 +6,7 @@
 /*   By: hnogared <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/01 14:11:48 by hnogared          #+#    #+#             */
-/*   Updated: 2024/01/15 19:46:14 by hnogared         ###   ########.fr       */
+/*   Updated: 2024/01/15 23:57:40 by hnogared         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,8 +17,7 @@
 # include <stddef.h>
 # include <stdlib.h>
 # include <stdint.h>
-
-# include <stdarg.h>
+# include <stdbool.h>
 
 # ifndef BUFFER_SIZE
 #  define BUFFER_SIZE	127
@@ -37,6 +36,9 @@
 
 /* BONUS */
 # include "../srcs/linked_lists/linked_lists.h"
+
+/* PRINTF */
+# include "ft_printf.h"
 
 /* GET_NEXT_LINE */
 char	*get_next_line(int fd);
