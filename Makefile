@@ -6,11 +6,12 @@
 #    By: hnogared <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/02/07 07:19:57 by hnogared          #+#    #+#              #
-#    Updated: 2024/01/15 18:44:53 by hnogared         ###   ########.fr        #
+#    Updated: 2024/01/15 20:44:29 by hnogared         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 LIB_NAME	:=	extended_ft
+#LIB_NAME	:=	ft
 
 STATIC_NAME		:=	$(addsuffix .a, $(addprefix lib, $(LIB_NAME)))
 DYNAMIC_NAME	:=	$(addsuffix .so, $(addprefix lib, $(LIB_NAME)))

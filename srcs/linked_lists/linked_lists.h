@@ -6,13 +6,19 @@
 /*   By: hnogared <hnogared@student.42perpigna      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/15 18:42:35 by hnogared          #+#    #+#             */
-/*   Updated: 2024/01/15 19:44:14 by hnogared         ###   ########.fr       */
+/*   Updated: 2024/01/15 19:57:52 by hnogared         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef LINKED_LISTS_H
 # define LINKED_LISTS_H
 
+/*
+ * Linked list node
+ *
+ * void *content		-> pointer to the node's content
+ * struct s_list *next	-> pointer to the list's next node
+ */
 typedef struct s_list
 {
 	void			*content;
