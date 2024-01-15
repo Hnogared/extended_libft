@@ -6,7 +6,7 @@
 #    By: hnogared <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/02/07 07:19:57 by hnogared          #+#    #+#              #
-#    Updated: 2024/01/06 23:29:03 by hnogared         ###   ########.fr        #
+#    Updated: 2024/01/15 18:44:53 by hnogared         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -16,17 +16,17 @@ STATIC_NAME		:=	$(addsuffix .a, $(addprefix lib, $(LIB_NAME)))
 DYNAMIC_NAME	:=	$(addsuffix .so, $(addprefix lib, $(LIB_NAME)))
 
 SRCS_DIR	:=	srcs
-PRINTF_DIR	:=	$(SRCS_DIR)/display/ft_printf
+PRINTF_DIR	:=	$(SRCS_DIR)/printing/ft_printf
 GNL_DIR		:=	$(SRCS_DIR)/get_next_line
 
 OBJS_DIR	:=	objs
 
 INCL_DIR	:=	includes
 
-VPATH	:=	$(SRCS_DIR)/char_checks:		\
-			$(SRCS_DIR)/display:			\
+VPATH	:=	$(SRCS_DIR)/chars:				\
+			$(SRCS_DIR)/printing:			\
 			$(SRCS_DIR)/linked_lists:		\
-			$(SRCS_DIR)/memory_management:	\
+			$(SRCS_DIR)/memory:				\
 			$(SRCS_DIR)/strings:			\
 			$(SRCS_DIR)/numbers:			\
 			$(PRINTF_DIR):					\

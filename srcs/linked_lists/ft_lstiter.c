@@ -6,12 +6,18 @@
 /*   By: hnogared <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/07 10:36:00 by hnogared          #+#    #+#             */
-/*   Updated: 2023/12/18 23:08:09 by hnogared         ###   ########.fr       */
+/*   Updated: 2024/01/15 19:35:29 by hnogared         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
+/*
+ * Function to apply a function to the content of each node of a linked list.
+ *
+ * @param t_list *lst		-> the first node of the linked list
+ * @param void (*f)(void *)	-> pointer to the function to apply on each content
+ */
 void	ft_lstiter(t_list *lst, void (*f)(void *))
 {
 	while (lst)

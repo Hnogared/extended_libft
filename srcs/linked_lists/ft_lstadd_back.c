@@ -6,23 +6,31 @@
 /*   By: hnogared <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/07 09:00:31 by hnogared          #+#    #+#             */
-/*   Updated: 2023/12/18 23:06:47 by hnogared         ###   ########.fr       */
+/*   Updated: 2024/01/15 19:19:54 by hnogared         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
+/*
+ * Function to add a linked list node at the end of a linked list.
+ *
+ * @param t_list **lst	-> pointer to the linked list to add to
+ * @param t_list *new	-> linked list node to add
+ */
 void	ft_lstadd_back(t_list **lst, t_list *new)
 {
 	t_list	*current;
 
-	if (!lst[0])
-		lst[0] = new;
-	else
+	if (!lst || !new)
+		return ;
+	if (!(*lst))
 	{
-		current = lst[0];
-		while (current->next != NULL)
-			current = current->next;
-		current->next = new;
+		*lst = new;
+		return ;
 	}
+	current = *lst;
+	while (current->next != NULL)
+		current = current->next;
+	current->next = new;
 }
