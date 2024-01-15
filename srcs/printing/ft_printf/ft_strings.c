@@ -6,11 +6,11 @@
 /*   By: hnogared <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/14 21:07:21 by hnogared          #+#    #+#             */
-/*   Updated: 2023/12/18 23:15:32 by hnogared         ###   ########.fr       */
+/*   Updated: 2024/01/15 19:53:25 by hnogared         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "libextended_ft.h"
 
 int	ft_check_char(const char c, const char *set)
 {

@@ -6,11 +6,11 @@
 /*   By: hnogared <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/01 13:44:04 by hnogared          #+#    #+#             */
-/*   Updated: 2023/12/18 21:08:07 by hnogared         ###   ########.fr       */
+/*   Updated: 2024/01/15 19:55:12 by hnogared         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "libextended_ft.h"
 
 size_t	ft_strlen(const char *str)
 {

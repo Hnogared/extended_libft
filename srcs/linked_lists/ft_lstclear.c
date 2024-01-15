@@ -6,11 +6,11 @@
 /*   By: hnogared <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/07 10:04:33 by hnogared          #+#    #+#             */
-/*   Updated: 2024/01/15 19:22:59 by hnogared         ###   ########.fr       */
+/*   Updated: 2024/01/15 19:49:05 by hnogared         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "libextended_ft.h"
 
 /*
  * Function to destroy a linked list using the parameter function to free the

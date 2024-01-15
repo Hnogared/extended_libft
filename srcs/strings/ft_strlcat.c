@@ -6,11 +6,11 @@
 /*   By: hnogared <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/07 19:45:32 by hnogared          #+#    #+#             */
-/*   Updated: 2023/12/18 22:39:10 by hnogared         ###   ########.fr       */
+/*   Updated: 2024/01/15 19:54:57 by hnogared         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "libextended_ft.h"
 
 size_t	ft_strlcat(char *dest, const char *src, size_t n)
 {

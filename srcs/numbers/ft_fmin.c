@@ -6,11 +6,11 @@
 /*   By: hnogared <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/18 14:57:36 by hnogared          #+#    #+#             */
-/*   Updated: 2024/01/05 21:59:30 by hnogared         ###   ########.fr       */
+/*   Updated: 2024/01/15 19:51:46 by hnogared         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "libextended_ft.h"
 
 /*
  * Function to return the smallest of two floats.

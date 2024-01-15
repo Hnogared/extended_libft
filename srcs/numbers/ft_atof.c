@@ -6,13 +6,11 @@
 /*   By: hnogared <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/03 13:49:59 by hnogared          #+#    #+#             */
-/*   Updated: 2023/12/19 00:07:53 by hnogared         ###   ########.fr       */
+/*   Updated: 2024/01/15 19:51:22 by hnogared         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
-
-#include <stdio.h>
+#include "libextended_ft.h"
 
 /*
  * Function to convert a trimmed string into a float.

@@ -6,11 +6,11 @@
 /*   By: hnogared <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/14 21:01:38 by hnogared          #+#    #+#             */
-/*   Updated: 2024/01/04 21:23:00 by hnogared         ###   ########.fr       */
+/*   Updated: 2024/01/15 19:52:53 by hnogared         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "libextended_ft.h"
 
 int	ft_putnbits_fdout(int nbr, int fd)
 {

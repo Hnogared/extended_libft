@@ -6,11 +6,11 @@
 /*   By: hnogared <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/07 08:19:18 by hnogared          #+#    #+#             */
-/*   Updated: 2024/01/15 19:20:02 by hnogared         ###   ########.fr       */
+/*   Updated: 2024/01/15 19:48:56 by hnogared         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "libextended_ft.h"
 
 /*
  * Function to add a linked list node at the beginning of a linked list.

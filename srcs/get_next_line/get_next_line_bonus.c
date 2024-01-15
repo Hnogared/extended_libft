@@ -6,11 +6,11 @@
 /*   By: hnogared <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/14 02:03:43 by hnogared          #+#    #+#             */
-/*   Updated: 2023/12/13 23:02:39 by hnogared         ###   ########.fr       */
+/*   Updated: 2024/01/15 19:48:05 by hnogared         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "libextended_ft.h"
 
 char	*gnl_strndup(const char *str, size_t size)
 {

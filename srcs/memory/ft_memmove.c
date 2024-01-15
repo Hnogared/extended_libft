@@ -6,11 +6,11 @@
 /*   By: hnogared <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/02 09:29:46 by hnogared          #+#    #+#             */
-/*   Updated: 2023/12/18 23:01:21 by hnogared         ###   ########.fr       */
+/*   Updated: 2024/01/15 19:50:45 by hnogared         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "libextended_ft.h"
 
 void	*ft_memmove(void *dest, const void *src, size_t n)
 {

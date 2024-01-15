@@ -6,11 +6,11 @@
 /*   By: hnogared <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/01 14:07:16 by hnogared          #+#    #+#             */
-/*   Updated: 2024/01/15 18:55:12 by hnogared         ###   ########.fr       */
+/*   Updated: 2024/01/15 19:50:10 by hnogared         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "libextended_ft.h"
 
 void	ft_bzero(void *s, size_t n)
 {

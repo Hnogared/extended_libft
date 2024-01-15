@@ -6,11 +6,11 @@
 /*   By: hnogared <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/06 13:33:57 by hnogared          #+#    #+#             */
-/*   Updated: 2023/12/18 23:06:26 by hnogared         ###   ########.fr       */
+/*   Updated: 2024/01/15 19:53:55 by hnogared         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "libextended_ft.h"
 
 void	ft_putstr_fd(char *s, int fd)
 {

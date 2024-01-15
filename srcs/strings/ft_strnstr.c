@@ -6,11 +6,11 @@
 /*   By: hnogared <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/03 09:46:14 by hnogared          #+#    #+#             */
-/*   Updated: 2023/12/18 22:45:12 by hnogared         ###   ########.fr       */
+/*   Updated: 2024/01/15 19:55:45 by hnogared         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "libextended_ft.h"
 
 char	*ft_strnstr(const char *big, const char *little, size_t n)
 {

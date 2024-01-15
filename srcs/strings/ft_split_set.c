@@ -6,11 +6,11 @@
 /*   By: hnogared <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/09 15:42:43 by hnogared          #+#    #+#             */
-/*   Updated: 2023/12/18 22:31:56 by hnogared         ###   ########.fr       */
+/*   Updated: 2024/01/15 19:54:15 by hnogared         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "libextended_ft.h"
 
 static int	ft_get_wordcnt(char const *s, char const *set)
 {

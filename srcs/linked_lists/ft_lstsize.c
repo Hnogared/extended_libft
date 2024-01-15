@@ -6,11 +6,11 @@
 /*   By: hnogared <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/07 08:39:39 by hnogared          #+#    #+#             */
-/*   Updated: 2024/01/15 19:44:07 by hnogared         ###   ########.fr       */
+/*   Updated: 2024/01/15 19:49:50 by hnogared         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "libextended_ft.h"
 
 /*
  * Function to return the size of a linked list.

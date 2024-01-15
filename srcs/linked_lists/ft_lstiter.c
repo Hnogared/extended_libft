@@ -6,11 +6,11 @@
 /*   By: hnogared <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/07 10:36:00 by hnogared          #+#    #+#             */
-/*   Updated: 2024/01/15 19:35:29 by hnogared         ###   ########.fr       */
+/*   Updated: 2024/01/15 19:49:20 by hnogared         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "libextended_ft.h"
 
 /*
  * Function to apply a function to the content of each node of a linked list.

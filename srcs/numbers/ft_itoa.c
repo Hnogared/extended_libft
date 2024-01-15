@@ -6,11 +6,11 @@
 /*   By: hnogared <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/04 08:23:55 by hnogared          #+#    #+#             */
-/*   Updated: 2023/12/18 23:03:57 by hnogared         ###   ########.fr       */
+/*   Updated: 2024/01/15 19:51:53 by hnogared         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "libextended_ft.h"
 
 /*
  * Function to get the amount of characters (digits and negative sign) inside

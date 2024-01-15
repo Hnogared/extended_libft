@@ -6,11 +6,11 @@
 /*   By: hnogared <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/07 09:56:10 by hnogared          #+#    #+#             */
-/*   Updated: 2024/01/15 19:25:57 by hnogared         ###   ########.fr       */
+/*   Updated: 2024/01/15 19:49:13 by hnogared         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "libextended_ft.h"
 
 /*
  * Function to free a linked list node using the parameter function to free the

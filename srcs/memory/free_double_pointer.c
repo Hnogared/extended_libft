@@ -6,11 +6,11 @@
 /*   By: hnogared <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/06 23:26:06 by hnogared          #+#    #+#             */
-/*   Updated: 2024/01/06 23:29:37 by hnogared         ###   ########.fr       */
+/*   Updated: 2024/01/15 19:50:04 by hnogared         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "libextended_ft.h"
 
 void	free_double_pointer(void **double_pointer)
 {

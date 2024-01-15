@@ -6,11 +6,11 @@
 /*   By: hnogared <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/07 09:00:31 by hnogared          #+#    #+#             */
-/*   Updated: 2024/01/15 19:19:54 by hnogared         ###   ########.fr       */
+/*   Updated: 2024/01/15 19:48:46 by hnogared         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "libextended_ft.h"
 
 /*
  * Function to add a linked list node at the end of a linked list.

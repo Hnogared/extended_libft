@@ -6,11 +6,11 @@
 /*   By: hnogared <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/06 11:32:00` by hnogared         #+#    #+#             */
-/*   Updated: 2023/12/18 22:39:22 by hnogared         ###   ########.fr       */
+/*   Updated: 2024/01/15 19:55:05 by hnogared         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "libextended_ft.h"
 
 size_t	ft_strlcpy(char *dest, const char *src, size_t n)
 {

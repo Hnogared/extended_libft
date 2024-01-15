@@ -6,11 +6,11 @@
 /*   By: hnogared <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/07 07:33:54 by hnogared          #+#    #+#             */
-/*   Updated: 2024/01/15 19:42:22 by hnogared         ###   ########.fr       */
+/*   Updated: 2024/01/15 19:49:42 by hnogared         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "libextended_ft.h"
 
 /*
  * Function to return an allocated linked list node with the parameter content.

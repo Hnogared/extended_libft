@@ -6,11 +6,11 @@
 /*   By: hnogared <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/18 14:57:36 by hnogared          #+#    #+#             */
-/*   Updated: 2024/01/05 21:58:30 by hnogared         ###   ########.fr       */
+/*   Updated: 2024/01/15 19:52:09 by hnogared         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "libextended_ft.h"
 
 /*
  * Function to return the bigest of two integers.
