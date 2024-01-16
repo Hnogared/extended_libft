@@ -6,7 +6,7 @@
 /*   By: hnogared <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/09 22:22:07 by hnogared          #+#    #+#             */
-/*   Updated: 2024/01/16 00:34:01 by hnogared         ###   ########.fr       */
+/*   Updated: 2024/01/16 01:13:37 by hnogared         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,7 +36,7 @@ static int	print_nbrconv(char conv, va_list args, int fd)
 			+ printf_puthex_fd(tempaddress, 0, conv, fd));
 	}
 	if (conv == 'd' || conv == 'i')
-		return (printf_putnbr_fd((int) va_arg(args, int), 0, fd));
+		return (printf_putint_fd((int) va_arg(args, int), 0, fd));
 	if (conv == 'u')
 		return (printf_putuint_fd(va_arg(args, unsigned int), 0, fd));
 	if (conv == 'x' || conv == 'X')

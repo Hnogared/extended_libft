@@ -6,7 +6,7 @@
 /*   By: hnogared <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/09 22:22:07 by hnogared          #+#    #+#             */
-/*   Updated: 2024/01/16 00:34:27 by hnogared         ###   ########.fr       */
+/*   Updated: 2024/01/16 00:48:59 by hnogared         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,15 +17,10 @@ static int	check_input(const char *input)
 	size_t	i;
 
 	i = 0;
-	while (input[i])
-	{
-		if (input[i] == '%' && input[i + 1] == '%')
-			i++;
-		else if (input[i] == '%' && !check_char(input[i + 1], "bcspdiuxX"))
-			return (ERROR);
+	while (input[i] && input[i + 1] && input[i] == '%'
+		&& !check_char(input[i + 1], "bcspdiuxX%"))
 		i++;
-	}
-	return (0);
+	return (PRINTF_ERROR * !input[i]);
 }
 
 int	ft_printf(const char *input, ...)
@@ -33,11 +28,10 @@ int	ft_printf(const char *input, ...)
 	int		count;
 	va_list	args;
 
-	count = 0;
-	if (check_input(input) == ERROR)
+	if (!input || check_input(input) == PRINTF_ERROR)
 		return (0);
 	va_start(args, input);
-	count += print_formatted((char *) input, args, STDOUT_FILENO);
+	count = print_formatted((char *) input, args, STDOUT_FILENO);
 	va_end(args);
 	return (count);
 }
@@ -50,11 +44,10 @@ int	ft_fprintf(int fd, const char *input, ...)
 	int		count;
 	va_list	args;
 
-	count = 0;
-	if (check_input(input) == ERROR)
+	if (fd < 0 || !input || check_input(input) == PRINTF_ERROR)
 		return (0);
 	va_start(args, input);
-	count += print_formatted((char *) input, args, fd);
+	count = print_formatted((char *) input, args, fd);
 	va_end(args);
 	return (count);
 }

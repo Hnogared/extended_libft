@@ -1,45 +1,57 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_output2.c                                       :+:      :+:    :+:   */
+/*   numbers_output.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: hnogared <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/14 21:01:38 by hnogared          #+#    #+#             */
-/*   Updated: 2024/01/16 00:11:51 by hnogared         ###   ########.fr       */
+/*   Updated: 2024/01/16 01:15:00 by hnogared         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libextended_ft.h"
 
+int	printf_putint_fd(int n, int len, int fd)
+{
+	if (n == -2147483648)
+		return (write(fd, "-2147483648", 11));
+	len += write(fd, "-", n < 0);
+	n *= -1 * (n < 0) + (n >= 0);
+	if (n <= 9)
+		return (len + printf_putchar_fd(n + '0', fd));
+	return (len + printf_putint_fd(n / 10, 0, fd)
+		+ printf_putchar_fd(n % 10 + '0', fd));
+}
+
+int	printf_putuint_fd(unsigned int n, int len, int fd)
+{
+	if (n <= 9)
+		return (len + printf_putchar_fd(n + '0', fd));
+	return (len + printf_putuint_fd(n / 10, 0, fd)
+		+ printf_putchar_fd(n % 10 + '0', fd));
+}
+
 int	printf_puthex_fd(unsigned long n, int len, char cap, int fd)
 {
-	char	*baselow;
-	char	*basehigh;
+	char	digit;
+	char	*base;
 
-	baselow = "0123456789abcdef";
-	basehigh = "0123456789ABCDEF";
-	if (n > 15)
-	{
-		len += printf_puthex_fd(n / 16, 0, cap, fd);
-		len += printf_puthex_fd(n % 16, 0, cap, fd);
-	}
+	base = "0123456789abcdef";
 	if (n <= 15)
 	{
-		if (cap == 'X')
-			printf_putchar_fd(basehigh[n], fd);
-		else
-			printf_putchar_fd(baselow[n], fd);
-		len++;
+		digit = base[n] - 32 * (n >= 10 && cap == 'X');
+		return (len + printf_putchar_fd(digit, fd));
 	}
-	return (len);
+	return (len + printf_puthex_fd(n / 16, 0, cap, fd)
+		+ printf_puthex_fd(n % 16, 0, cap, fd));
 }
 
 int	printf_putnbits_fd(int nbr, int fd)
 {
-	char			bit;
-	unsigned int	int_size;
-	unsigned int	mask;
+	char	bit;
+	size_t	int_size;
+	size_t	mask;
 
 	int_size = sizeof(int) * 8;
 	mask = 1 << (int_size - 1);

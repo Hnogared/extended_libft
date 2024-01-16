@@ -6,7 +6,7 @@
 #    By: hnogared <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/02/07 07:19:57 by hnogared          #+#    #+#              #
-#    Updated: 2024/01/16 00:35:22 by hnogared         ###   ########.fr        #
+#    Updated: 2024/01/16 01:15:31 by hnogared         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -100,8 +100,8 @@ LIB_SRCS		:= 	ft_isalpha.c			\
 
 PRINTF_SRCS		:=	ft_printf.c			\
 					print_formatted.c	\
-					output.c			\
-					output2.c
+					numbers_output.c	\
+					strings_output.c
 
 GNL_SRCS		:=	get_next_line_bonus.c
 
