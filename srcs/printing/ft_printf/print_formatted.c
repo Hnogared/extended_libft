@@ -6,11 +6,11 @@
 /*   By: hnogared <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/09 22:22:07 by hnogared          #+#    #+#             */
-/*   Updated: 2024/01/16 01:30:00 by hnogared         ###   ########.fr       */
+/*   Updated: 2024/01/16 01:55:38 by hnogared         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libextended_ft.h"
+#include "ft_printf.h"
 
 int	check_char(char c, const char *set)
 {
@@ -19,7 +19,7 @@ int	check_char(char c, const char *set)
 	i = 0;
 	while (set[i] && (unsigned char) c != (unsigned char) set[i])
 		i++;
-	return (!!set[i] || (unsigned char) c == 0);
+	return (!!set[i]);
 }
 
 static int	print_nbrconv(char conv, va_list args, int fd)
