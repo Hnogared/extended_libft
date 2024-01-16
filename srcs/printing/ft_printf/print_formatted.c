@@ -6,7 +6,7 @@
 /*   By: hnogared <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/09 22:22:07 by hnogared          #+#    #+#             */
-/*   Updated: 2024/01/16 01:13:37 by hnogared         ###   ########.fr       */
+/*   Updated: 2024/01/16 01:30:00 by hnogared         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,16 +24,14 @@ int	check_char(char c, const char *set)
 
 static int	print_nbrconv(char conv, va_list args, int fd)
 {
-	unsigned long	tempaddress;
+	unsigned long	tmpaddr;
 
-	tempaddress = 0;
 	if (conv == 'p')
 	{
-		tempaddress = (unsigned long) va_arg(args, unsigned long);
-		if (!tempaddress)
-			return (printf_putstr_fd("(nil)", fd));
-		return (printf_putstr_fd("0x", fd)
-			+ printf_puthex_fd(tempaddress, 0, conv, fd));
+		tmpaddr = (unsigned long) va_arg(args, unsigned long);
+		if (!tmpaddr)
+			return (write(fd, "(nil)", 5));
+		return (write(fd, "0x", 2) + printf_puthex_fd(tmpaddr, 0, conv, fd));
 	}
 	if (conv == 'd' || conv == 'i')
 		return (printf_putint_fd((int) va_arg(args, int), 0, fd));
@@ -48,22 +46,18 @@ static int	print_nbrconv(char conv, va_list args, int fd)
 
 static int	print_chrconv(char conv, va_list args, int fd)
 {
-	int				count;
 	char			*tempstr;
 
-	count = 0;
 	if (conv == 'c')
-		count += printf_putchar_fd((int) va_arg(args, int), fd);
+		return (printf_putchar_fd(va_arg(args, int), fd));
 	if (conv == 's')
 	{
-		tempstr = (char *) va_arg(args, char *);
+		tempstr = va_arg(args, char *);
 		if (!tempstr)
-			return (printf_putstr_fd("(null)", fd));
-		count += printf_putstr_fd(tempstr, fd);
+			return (write(fd, "(null)", 6));
+		return (printf_putstr_fd(tempstr, fd));
 	}
-	if (conv == '%')
-		count += printf_putchar_fd('%', fd);
-	return (count);
+	return (write(fd, &conv, 1 * (conv == '%')));
 }
 
 int	print_formatted(const char *input, va_list args, int fd)
@@ -80,16 +74,15 @@ int	print_formatted(const char *input, va_list args, int fd)
 		while (input[i + j] && input[i + j] != '%')
 			j++;
 		write(fd, input + i, j);
-		i += j;
 		count += j;
-		if (input[i] == '%')
-		{
-			if (check_char(input[i + 1], "bpdiuxX"))
-				count += print_nbrconv(input[i + 1], args, fd);
-			if (check_char(input[i + 1], "cs%"))
-				count += print_chrconv(input[i + 1], args, fd);
-			i += 2;
-		}
+		if (!input[i + j])
+			break ;
+		i += j;
+		if (check_char(input[i + 1], "bpdiuxX"))
+			count += print_nbrconv(input[i + 1], args, fd);
+		if (check_char(input[i + 1], "cs%"))
+			count += print_chrconv(input[i + 1], args, fd);
+		i += 2;
 	}
 	return (count);
 }
